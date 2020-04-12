@@ -2,56 +2,211 @@
     --background: #FFFFFF;
     --text: black;
 }
-
-
-
-
-
+@media(prefers-color-scheme:dark){
+    :root{
+        --background: #191B1F;
+        --text: white;
+    }
+}
 body {
-    display: block;
+    background-color: var(--background);
     font-family: "Roboto", monospace;
     font-size: 18px;
     line-height: 1.4;
     font-weight: 300;
-    color: var(--text)
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+}
+header{
+    max-height: 80px;
+    position: fixed;
+    width: 100%;
+    
 }
 nav{
     background-color: var(--background) ;
+    padding-top: 1%;
+}
+.navbar{
     display: flex;
     flex-direction: row;
-    width: 100%;
-    max-height: 80px;
-    padding-top: 1%;
-    position: fixed;
+    margin-right: 20px;
 }
 .logo{
     flex: 50%;
     margin-left: 70px;
     padding: 10px;
 }
-h1{
+.logo > h1 {
     font-size: xx-large;
-    font-weight: 100;
-}
-.nav-link{
-    flex: .4;
-    align-self: center;
-    font-size: 1.6rem;
-}
-.one {
-    text-align:right;
     
 }
+
 .two{
     text-align: center;
-    border-left: 1px solid var(--text);
-    border-right: 1px solid var(--text);
+    
 }
-.three{
+
+.nav-link{
+    text-align: center;
+    flex: auto 0 80px;
+    align-self: center;
+    font-size: 1.6rem;
+    padding: 10px 20px 10px 20px;
+    justify-content: center;
+}
+.nav-link:hover{
+    font-size: 1.6rem;
+    align-self: center !important;
+    background-color: var(--text);
+    color:var(--background);
+    text-decoration: none;
+    
+}
+a{
+    text-decoration: none;
+    color: var(--text);
+}
+a:hover{
+    text-decoration: none;
+    color: var(--background);
+}
+.nav-link:hover > a{
+    color: var(--background);
+}
+/* a{
+    text-decoration: none;
+    color: var(--text);
+}
+a:hover{
+    color: var(--background);
+    text-decoration: none;
+} */
+main{
+    width: 100%;
+    display: block;
+    background-color: var(--background);
+    margin-top: 100px;
+    
+    min-height: 100vh;
+    /* border: 10px solid green; */
+}
+.page{
+    background-color: var(--background);
+    max-width: 1040px;
+    width: 100%;
+    height:100%;
+    font-size: 14px;
+    color: var(--text);
+    /* border: 1px solid blue; */
+    margin: 0 auto;
+}
+.content{
+    margin-left: 200px;
+    margin-right: 200px;
+    /* border: 1px solid red; */
+}
+section{
+    margin-bottom: 45px;
+}
+#welcome{
+    padding: 70px 170px 50px;
     text-align: left;
 }
-span:hover{
-    background-color: black;
-    border: 10px double black;
-    color:white;
+#welcome-text{
+    font-size: 3.8rem;
+    
+}
+.image-holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 25px 0 50px;
+    
+    border-radius: 3px;
+}
+img{
+    max-width: 1040px;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid var(--text);
+}
+p{
+    min-width: 100%;
+    font-size: larger;
+    font-family: inherit;
+    font-size: 20px;
+}
+h1{
+    font-weight: bold;
+}
+.post-content{
+    margin-top: 4vh;
+}
+ol{
+    padding-left: 2rem;
+}
+li{
+    line-height: 1.6em;
+    padding: 5px;
+    font-size: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.article-summary{
+    text-align: justify;
+}
+
+.project-holder{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
+.project-thumbnail{
+    max-width: 200px;
+    width: auto;
+    height: auto;
+    border: none;
+    margin-right: 25px;
+}
+.top-align{
+    vertical-align: top;
+}
+.bottom-align{
+    vertical-align: bottom;
+}
+#project-link:hover{
+    color: var(--text);
+}
+#project-link{
+    text-decoration: underline;
+}
+.proj-link{
+    text-align: center;
+    flex: auto 0 40px;
+    align-self: center;
+    font-size: 1.6rem;
+    justify-content: center;
+}
+
+#copyright {
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+footer {
+    margin-top: 10vh;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.social:hover{
+    color: var(--text);
 }
